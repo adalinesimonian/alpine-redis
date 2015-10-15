@@ -1,0 +1,19 @@
+sudo: required
+
+language: cpp
+
+services:
+  - docker
+
+before_install:
+  - docker build -t vartan/alpine-redis-test -f Dockerfile.test .
+
+script:
+  - docker run --rm -ti vartan/alpine-redis-test /bin/sh -c "cd /usr/src/redis; ./runtest --clients 1"
+
+deploy:
+  provider: script
+  script: deploy.sh
+  on:
+    tags: true
+  	branch: master
