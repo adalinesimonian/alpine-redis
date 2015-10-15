@@ -7,13 +7,13 @@ Lightweight Redis image for Docker using Alpine Linux
 ## Basic usage
 
 ```
-$ docker run -d vartan/alpine-redis:3.0.4
+$ docker run -d vartan/alpine-redis:3.0.5
 ```
 
 ## Using your own configuration
 
 ```Dockerfile
-FROM vartan/alpine-redis:3.0.4
+FROM vartan/alpine-redis:3.0.5
 
 COPY redis.conf /redis.conf
 

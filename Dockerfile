@@ -15,9 +15,9 @@ RUN apk add --update ca-certificates curl gnupg && \
     apk del ca-certificates curl gnupg && \
     rm -rf /var/cache/apk/*
 
-ENV REDIS_VERSION 3.0.4
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.0.4.tar.gz
-ENV REDIS_DOWNLOAD_SHA1 cccc58b2b8643930840870f17280fcae57ed7675
+ENV REDIS_VERSION 3.0.5
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.0.5.tar.gz
+ENV REDIS_DOWNLOAD_SHA1 ad3ee178c42bfcfd310c72bbddffbbe35db9b4a6
 
 # for redis-sentinel see: http://redis.io/topics/sentinel
 RUN apk add --update ca-certificates curl gcc libc-dev make tar linux-headers && \
