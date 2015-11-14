@@ -16,6 +16,7 @@ $ docker run -d vartan/alpine-redis:3.0.5
 FROM vartan/alpine-redis:3.0.5
 
 COPY redis.conf /redis.conf
+RUN chown redis /redis.conf
 
 CMD [ "redis-server", "/redis.conf" ]
 ```
